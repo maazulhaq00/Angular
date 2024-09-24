@@ -1,0 +1,27 @@
+<h1>Data Binding</h1>
+<h2>Interpolation</h2>
+
+<p>The course is {{course}}</p>
+<img src="{{imgUrl}}" /><br>
+<label>
+    <input type="{{type}}"> {{course}}
+</label><br>
+
+<input type="text" value="{{course}}"><br>
+
+<h2>Property Binding</h2>
+
+<img [src]="imgUrl" alt="">
+<input [type]="type"> OK
+<p [innerHTML]="course"></p>
+
+<h1>Event Binding</h1>
+
+<button (click)="sayHello('Maaz')">Click Me</button>
+<p (click)="sayHello('para')">This is para</p>
+<button (click)="changeCourse('React')">Change Cousre</button>
+
+<h1>ngModel / Two Way</h1>
+<label for=""> course name
+    <input type="text" [(ngModel)]="course">
+</label>

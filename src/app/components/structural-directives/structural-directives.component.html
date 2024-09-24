@@ -1,0 +1,69 @@
+<div *ngIf="isDiv1Visible" class="div1">
+    Div 1
+</div>
+
+<button (click)="hideDiv1()">Hide</button>
+<button (click)="showDiv1()">Show</button>
+<button (click)="toggleDiv1()">Toggle</button>
+
+
+
+<div *ngIf="num1 > num2" class="div2">
+    Greater
+</div><br>
+<div *ngIf="num1 <= num2" class="div2">
+    Lesser Or Equal
+</div><br>
+
+Number 01 <input type="number" [(ngModel)]="num1"><br>
+Number 02 <input type="number" [(ngModel)]="num2"><br>
+<br>
+
+
+<div *ngIf="state == 'Sindh'" class="div1">
+    Sindh state
+</div>
+
+<select [(ngModel)]="state">
+    <option value="">Select State</option>
+    <option value="Sindh">Sindh</option>
+    <option value="Punjab">Punjab</option>
+    <option value="KPK">KPK</option>
+    <option value="Balochistan">Balochistan</option>
+</select>
+{{state}}
+
+<ul>
+    <li *ngFor="let city of cities">{{city}}</li>
+</ul>
+
+<p *ngFor="let city of cities">{{city}}</p>
+
+<select>
+    <option *ngFor="let city of cities" value="{{city}}">
+        {{city}}
+    </option>
+</select>
+
+<table width="100%" border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>CITY</th>
+            <th>STATUS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.studentId}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.city}}</td>
+            <td>
+                <span *ngIf="student.isActive">Active</span>
+                <span *ngIf="!student.isActive">Not Active</span>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

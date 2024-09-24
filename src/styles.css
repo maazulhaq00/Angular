@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.component {
+    padding: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid gray;
+}
