@@ -1,0 +1,51 @@
+<label for="">
+    Add Task
+    <input type="text" [(ngModel)]="todoTask">
+    <button (click)="addTask()">ADD</button>
+</label>
+<div *ngIf="todoList.length == 0">No tasks Available</div>
+<!-- <div *ngIf="todoList.length > 0">
+    <ul>
+        <li *ngFor="let td of todoList">
+            <span *ngIf="td.isDone" style="background-color: rgb(173, 180, 180);">
+                {{td.task}}
+
+                <button (click)="done(td.task)">Done</button>
+                <button (click)="delete(td.task)">Delete</button>
+            </span>
+            <span *ngIf="!td.isDone" style="background-color: rgb(182, 243, 185);">
+                {{td.task}}
+
+                <button (click)="done(td.task)">Done</button>
+                <button (click)="delete(td.task)">Delete</button>
+            </span>
+        </li>
+    </ul>
+</div> -->
+<!-- 
+<div *ngIf="todoList.length > 0">
+    <ul>
+        <li *ngFor="let td of todoList">
+            <span [ngClass]="td.isDone == true ? 'done' : 'notDone' ">
+                {{td.task}}
+
+                <button (click)="done(td.task)">Done</button>
+                <button (click)="delete(td.task)">Delete</button>
+            </span>
+        </li>
+    </ul>
+</div>
+ -->
+
+<div *ngIf="todoList.length > 0">
+    <ul>
+        <li *ngFor="let td of todoList">
+            <span [ngStyle]="{'background-color': td.isDone ? 'blue' : 'green'}">
+                {{td.task}}
+
+                <button (click)="done(td.task)">Done</button>
+                <button (click)="delete(td.task)">Delete</button>
+            </span>
+        </li>
+    </ul>
+</div>

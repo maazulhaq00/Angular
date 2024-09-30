@@ -3,11 +3,13 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { StructuralDirectivesComponent } from './components/structural-directives/structural-directives.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { AttributeDirectiveComponent } from './components/attribute-directive/attribute-directive.component';
 
 export const routes: Routes = [
     {
         path: "",
-        component: DataBindingComponent
+        component: AttributeDirectiveComponent
     },    
     {
         path: "home",
@@ -24,5 +26,13 @@ export const routes: Routes = [
     {
         path: "structural",
         component: StructuralDirectivesComponent
+    },    
+    {
+        path: "todo",
+        component: TodoListComponent
+    },    
+    {
+        path: "attribute",
+        component: AttributeDirectiveComponent
     }
 ];

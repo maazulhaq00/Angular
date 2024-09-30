@@ -1,0 +1,10 @@
+.done {
+    background-color: rgb(78, 106, 129);
+    color: white;
+    text-decoration: line-through;
+}
+
+.notDone {
+    background-color: rgb(18, 108, 226);
+    color: white;
+}
